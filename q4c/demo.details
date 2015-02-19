@@ -1,0 +1,11 @@
+Requires AngularJS
+http://jsfiddle.net/gh/get/AngularJS/1.2.1/phollott/rhizome/tree/master/q4c/
+---
+name: Portfolio Angular Demo Rhizome Q4C
+description: Health Questionnaire application using SnapSVG and Angular
+authors:
+- Piers Hollott
+normalize_css: no
+wrap: h
+panel_js: 0
+panel_css: 0

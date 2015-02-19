@@ -1,0 +1,47 @@
+.frame {
+    opacity: 0
+}
+.buttonface {
+    width: 250px;
+    height: 25px;
+}
+.buttonhalf {
+    width: 123px;
+    height: 25px;
+}
+ol.buttonlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.question {
+    padding: 5px;
+    max-width: 250px;
+}
+.label {
+    font-weight: bold;
+ /*   color: #b8d3da */
+}
+#theory {
+    position: absolute;
+    width: 600px;
+    height: 424px;
+    top: 0px;
+    left: 318px;
+    padding-left: 16px;
+    color: #312b02;
+    background-color: #adb39b
+}
+#quiz {
+    width:250px;
+    height:200px;
+}
+#rhizome {
+    width:290px;
+    height:410px;
+    border-style: ridge;
+    background-color: #CCCCCC
+}
+#rhizSvg {
+    background-color: white
+}
