@@ -9,7 +9,7 @@ Rhizome is Mobile Health using AngularJS and HL7 FHIR (Fast Healthcare Interoper
 + [Rhizome Questions4Care Demonstration](https://github.com/phollott/rhizome/blob/master/q4c/README.md)
 + [Rhizome Timelines4Care Demonstration](https://github.com/phollott/rhizome/tree/master/t4c/README.md)
 
-Also refer to the [embedded demo page](http://phollott.github.io/rhizome/), which showcases both Q4C and T4C, and my [Mobile First Interoperability](http://phollott.github.io/rhizome/mobile-first-interop.svg) presentation, also in this project.
+For more information, refer to the demonstrations above. Also refer to the [embedded demo page](http://phollott.github.io/rhizome/), which showcases both Q4C and T4C, and my [Mobile First Interoperability](http://phollott.github.io/rhizome/mobile-first-interop.svg) presentation, also in this project.
 
 Rhizome is a library of templates and services I am building using AngularJS and other JavaScript libraries, guided by the notion of creating a set of client-side components that support standards-based client-side mobile and social application development for the Healthcare industry.
 
