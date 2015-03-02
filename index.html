@@ -1,93 +1,74 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
+    <meta name="description" content="Rhizome : Mobile Health using AngularJS and HL7 FHIR">
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Rhizome by phollott</title>
+    <title>Rhizome</title>
   </head>
 
   <body>
-    <a id="forkme_banner" href="https://github.com/phollott/rhizome">View on GitHub</a>
-    <div class="shell">
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Rhizome</h1>
-            <h2>Mobile Health using AngularJS and HL7 FHIR</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/phollott/rhizome">View on GitHub</a>
 
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/phollott/rhizome/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/phollott/rhizome/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
+          <h1 id="project_title">Rhizome</h1>
+          <h2 id="project_tagline">Mobile Health using AngularJS and HL7 FHIR</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/phollott/rhizome/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/phollott/rhizome/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="rhizome-project" class="anchor" href="#rhizome-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rhizome Project</h1>
+
+<p>Rhizome is Mobile Health using AngularJS and HL7 FHIR (Fast Healthcare Interoperability Resources). It stands for  <em>Resource-based Health Information Zone for the Mobile Enterprise</em>.</p>
+
+
+
+<ul>
+<li><a href="http://jsfiddle.net/phollott/4czk30n8/embedded/result/">Presentation Slides: The Next Five Years</a></li>
+<li><a href="https://github.com/phollott/rhizome/blob/master/q4c/README.md">Rhizome Questions4Care Demonstration</a></li>
+<li><a href="https://github.com/phollott/rhizome/tree/master/t4c/README.md">Rhizome Timelines4Care Demonstration</a></li>
+</ul>
+
+<p>For more information, refer to the demonstrations above. Also refer to the <a href="http://phollott.github.io/rhizome/">embedded demo page</a>, which showcases both Q4C and T4C, and my <a href="http://phollott.github.io/rhizome/mobile-first-interop.svg">Mobile First Interoperability</a> poster presentation, both of which are also in this project.</p>
+
+<p>Rhizome is a library of templates and services I am building using AngularJS and other JavaScript libraries, guided by the notion of creating a set of client-side components that support standards-based client-side mobile and social application development for the Healthcare industry.</p>
+
+<p>This work is based on three technical requirements:</p>
+
+<ol>
+<li>Create component demonstrators that are portable and easily shared using Github and jsFiddle.</li>
+<li>Demonstrate use of AngularJS as an early adopter of features from the W3C <a href="http://www.w3.org/TR/components-intro/">Web Components</a> specification, and as a mechanism for managing client-side services.</li>
+<li>Demonstrate use of <a href="http://www.hl7.org/implement/standards/fhir/">HL7 FHIR</a> as an early adopter of resource-based, mobile and social features in a health standard, as well as elements from the NIEM Health Domain.</li>
+</ol>
+
+
       </section>
+    </div>
 
-      <span class="banner-fix"></span>
-
-      <section id="main_content">
-        <h3><a id="rhizome-q4c" class="anchor" href="#rhizome-q4c" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions for Care</h3>
-        <p>Questions for Care (Q4C) is a healthcare demonstrator combining an industry standard (HL7 FHIR), a JavaScript framework (AngularJS), and Scalable Vector Graphic animation (SnapSVG). See the <a href="https://github.com/phollott/rhizome/blob/master/README.md">Rhizome repository</a>.</p>
-        <p>Click "Result" or "Edit in jsFiddle" to view demonstrator. </p> <!--width="505"-->
-<iframe width="835" height="575" style="position:relative;left:-160px" src="http://jsfiddle.net/phollott/gku1cd8n/embedded/result,js,html,css/" 
-allowfullscreen="allowfullscreen" seamless="seamless" frameborder="0" class="noScrolling" scrolling="no"></iframe>
-
-        <h3><a id="rhizome-t4c" class="anchor" href="#rhizome-t4c" aria-hidden="true"><span class="octicon octicon-link"></span></a>Timelines for Care</h3>
-        <p>Timelines for Care (T4C) is a healthcare demonstrator combining an industry standard (HL7 FHIR), a JavaScript timeline tool (TimelineJS), and some simple data adaptation. See the <a href="https://github.com/phollott/rhizome/blob/master/README.md">Rhizome repository</a>.</p>
-        <p>Click "Result" or "Edit in jsFiddle" to view demonstrator. </p>
-<iframe width="835" height="655" style="position:relative;left:-160px" src="http://jsfiddle.net/phollott/xqphofdg/embedded/result,js,html,css/" 
-allowfullscreen="allowfullscreen" seamless="seamless" frameborder="0" class="noScrolling" scrolling="no"></iframe>
-        <p>My goal is to eventually combine these two demonstrations into a single application that will use Healthcare Questionnaires to determine outcomes, and then assign appropriate CarePlans based on these outcomes. For instance, if your responses place you in a high risk category, a CarePlan is activated which includes contacting a practitioner and following through with additional steps at home.</p>
-
-<!--<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre> -->
-
-<!--<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="https://help.github.com/pages">https://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
--->
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/phollott">phollott</a> can be found on <a href="https://github.com/phollott/rhizome">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Rhizome maintained by <a href="https://github.com/phollott">phollott</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
-
     </div>
 
     
+
   </body>
 </html>
