@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/headers.css">
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="css/toolbars.css">
+    <link rel="stylesheet" type="text/css" href="css/rhizome.css">
+    <title>Rhizome Viewer</title>
+</head>
+
+<body>
+
+    <section role="region">
+        <header>
+            <!-- Icon that will indicate whether you are online or offline - enabled if you are using offline/appcache (see above) -->
+            <div id="online-status" title="Online"></div>
+            <menu type="toolbar">
+                <button id="install"><span class="icon icon-add">add</span></button>
+            </menu>
+            <h1>Rhizome Viewer NIEM</h1>
+        </header>
+    </section>
+
+    <div id="main">
+		<form id="patient">
+			<fieldset class="view">
+				<legend>Patient Info</legend>
+				<h3 id="error-display" style="display:none">Errors</h3>
+				<ol>
+					<li><div id="title"></div></li>
+					<li><div id="name"></div></li>
+				</ol>
+				<ol>
+					<li><div id="prescriptions"></div></li>
+				</ol>
+			</fieldset>
+		</form>		
+    </div>
+
+    <footer>
+        <div role="toolbar">
+            <ul>
+                <li><button id="undo" class="undo">Undo</button></li>
+                <li><button id="reload" class="update">Update</button></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/offline.js"></script>
+	<script type="text/javascript" src="js/Saxon-CE_1.1/Saxonce/Saxonce.nocache.js"></script>
+	<script type="text/javascript">
+		var errors = new Array()
+		var onSaxonLoad = function() {
+			Saxon.setErrorHandler(handler)
+			Saxon.setLogLevel("FINE")
+		}
+				
+		var handler = function(saxonError) {
+			errors.push(saxonError.message + " " + saxonError.level + " " + saxonError.time);
+		}
+
+		var saxonErrorDump = function() {
+			var errorDisplay = document.querySelector("#error-display");			
+			errorDisplay.innerHTML = errors.toString();
+		}
+
+		/**
+		 * Note: there may exist a race condition between window.onload and onSaxonLoad, but I
+		 * have not seen any evidence of this. Yet.
+		 **/
+		var activity
+		window.onload = function() {
+			navigator.mozSetMessageHandler('activity', function(activityRequest) {
+				activity = activityRequest
+				mimetype = activityRequest.source.data.type
+				payload = activityRequest.source.data.payload
+				switch (activityRequest.source.name) {
+		
+					case 'view':
+						if (/^application\/xml\+niem$/.test(mimetype)) {
+							if (payload) {
+//								alert(payload)
+								var xsl = Saxon.requestXML('templates/meds.xsl')
+								var xml = Saxon.parseXML(payload)
+								var proc = Saxon.newXSLT20Processor(xsl)
+								proc.updateHTMLDocument(xml)
+//								saxonErrorDump()
+							}
+						}
+					break										
+
+					default:
+						alert('not a recognized activity')
+			
+				}
+			})	
+		}
+	</script>
+</body>
+</html>

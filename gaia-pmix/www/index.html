@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/headers.css">
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="css/toolbars.css">
+    <link rel="stylesheet" type="text/css" href="css/rhizome.css">
+    <title>Rhizome Demo</title>
+</head>
+
+<body>
+
+    <section role="region">
+        <header>
+            <!-- Icon that will indicate whether you are online or offline - enabled if you are using offline/appcache (see above) -->
+            <div id="online-status" title="Online"></div>
+            <menu type="toolbar">
+                <button id="install"><span class="icon icon-add">add</span></button>
+            </menu>
+            <h2>
+                Rhizome: Resource-based Healthcare Information Zone - Mobile Exchange
+            </h2>
+        </header>
+    </section>
+
+    <div id="main">
+
+        <p id="installation-instructions">Press the + button in the top right corner to install this app.</p>
+		<h3 id="exception-presenter">Exceptions are displayed here</h3>
+
+		<button id="view-person">View Person</button>
+		<button id="view-medication">View Meds</button>
+		<form id="patient" name="Patient">
+			<fieldset>
+				<legend>Patient Confirmation</legend>
+				<ol>
+					<li>
+						<label for=identifier>* Patient ID</label>
+						<input id=identifier name=identifier type=text value="1" required autofocus>
+					</li>
+					<li>
+						<label for=family>* Family Name</label>
+						<input id=family name=family type=text value="" required>
+					</li>
+					<li>
+						<label for=gender>Gender</label>
+						<input id=gender name=gender type=text placeholder="F/M">
+					</li>
+					<li>
+						<label for=birthdate>Birth Date</label>
+						<input id=birthdate name=birthdate type=text placeholder="yyyy-mm-dd">
+					</li>
+<!--					<li>
+						<label for=zip>* Postal/Zip Code</label>
+						<input id=zip name=zip type=text value="60624" required autofocus>
+					</li> -->
+				</ol>
+			</fieldset>
+		</form>
+		
+    </div>
+
+	
+    <footer>
+        <div role="toolbar">
+            <ul>
+<!--                <li><button id="undo" class="undo">Undo</button></li> -->
+                <li><button id="reload" class="update">Update</button></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/function.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/webapp.js"></script>
+    <script type="text/javascript" src="js/offline.js"></script>
+    <!-- 
+        Loosely based on fxosstub: https://github.com/Jaxo/fxosstub
+    -->
+
+</body>
+</html>

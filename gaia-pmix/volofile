@@ -1,0 +1,59 @@
+/*jslint node: true */
+'use strict';
+
+var crypto = require('crypto');
+var fs = require('fs');
+var path = require('path');
+var buildDir = 'www-built';
+
+module.exports = {
+    build: {
+        flags: {
+            //Does not print the build output.
+            'q': 'quiet'
+        },
+
+        run: function (d, v, namedArgs) {
+            //Remove the old dir
+            v.rm('www-built');
+
+            d.resolve(v.spawn('node', ['tools/r.js', '-o', 'tools/build.js'], {
+                useConsole: !namedArgs.quiet
+            }));
+        }
+    },
+    serve: function(d, v, namedArgs) {
+        try {
+            var connect = require('connect');
+        }
+        catch(e) {
+            console.log('To use the `serve` command, you must ' +
+                        'install the connect module:\n\n' + 
+                        'npm install connect');
+            return;
+        }
+
+        var lessMiddleware = require('less-middleware');
+
+        var port = 8008;
+        var base = path.join(process.cwd(), namedArgs.base || 'www');
+        var middleware = [
+            lessMiddleware({ src: base }),
+            connect.static(base),
+            connect.directory(base),
+        ];
+
+        connect.logger.format("OpenWebApp",
+                              "[D] server :method :url :status " +
+                              ":res[content-length] - :response-time ms");
+        middleware.unshift(connect.logger("OpenWebApp"));
+
+        console.log("starting web server on port " + port);
+        connect.apply(null, middleware).listen(port);
+    },
+    //Creates a local project command called appcache
+    appcache: require('volo-appcache')({
+        depends: ['build']
+    }),
+    ghdeploy: require('volo-ghdeploy')('www-built', 'www-ghdeploy')
+};

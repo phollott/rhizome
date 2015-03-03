@@ -1,0 +1,36 @@
+{
+    "version": "1",
+    "name": "Rhizome Pharm",
+    "launch_path": "index.html",
+    "description": "Rhizome (Medication Demo)",
+    "icons": {
+        "16": "images/logo16.png",
+        "32": "images/logo32.png",
+        "48": "images/logo48.png",
+        "64": "images/logo64.png",
+        "128": "images/logo128.png"
+    },
+    "developer": {
+        "name": "Piers Hollott",
+        "url": "http://piershollott.blogspot.com"
+    },
+	"activities": {
+		"view": {
+		  "filters": {
+			"type": ["application/xml+niem"],
+			"domain": "pmix"
+		   },
+		  "disposition": "inline",
+		  "returnValue": true,
+		  "href": "/index_niem.html"
+		}
+    },
+    "installs_allowed_from": ["*"],
+    "default_locale": "en",
+	"type": "privileged",
+    "permissions": {
+		"systemXHR": { "description": "Required for certain web communications" },
+		"desktop-notification": {},
+        "alarms" : {}
+    }
+}
