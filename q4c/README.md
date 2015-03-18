@@ -3,6 +3,7 @@ Questions for Care
 
 + [Back to Rhizome Fundamentals](https://github.com/phollott/rhizome/blob/master/README.md)
 + [Rhizome Questions4Care Demo (jsFiddle)](http://jsfiddle.net/phollott/gku1cd8n/)
++ [Rhizome Questions4Care Demo (run from GitHub)](http://jsfiddle.net/gh/get/AngularJS/1.2.1/phollott/rhizome/tree/master/q4c/)
 
 Rhizome: Questions4Care (Q4C) is a health questionnaire application built using AngularJS and SnapSVG with resources from the HL7 FHIR standard. This app supports acute care applications, like Admission, Discharge, and Transfer (ADT), as well as primary and home care settings. Patients should have access to a single style of application in all of these settings.
 
