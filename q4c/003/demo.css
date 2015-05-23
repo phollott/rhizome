@@ -1,0 +1,66 @@
+/* notes: uses Rhizome library and SnapSVG successfully for Questions */
+/* Next step is to either embed TimelineJS or VisJs to do Careplan */
+/* 640 x 390 
+https://jsfiddle.net/phollott/f0rjwtuq/4/embedded/result/*/
+ #txt-content {
+    position: absolute;
+    width: 64px;
+    height: 39px;
+    background-color: darkgray
+}
+ #q4c-content {
+    position: absolute;
+    width: 640px;
+    height: 390px;
+    background-color: darkgray
+}
+#rhizSvg {
+    position:absolute;
+    top:10px;
+    left:10px;
+    background-color: white
+}
+#quiz {
+    position:absolute;
+    top:20px;
+    left:385px;
+    width:252px;
+    height:200px;
+    padding: 0px;
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+    font-size: 10pt
+}
+.frame {
+    opacity: 0
+}
+.buttonface {
+    width: 250px;
+    height: 25px;
+}
+.buttonhalf {
+    width: 123px;
+    height: 25px;
+    font-size: 8pt
+}
+ol.buttonlist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.question {
+    padding: 5px;
+    max-width: 250px;
+}
+.label {
+    font-family: Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold
+}
+#theory-details {
+    position: absolute;
+    top: 50px;
+    left: 350px;
+    width: 400px;
+    /*    background-color:gray */
+}
