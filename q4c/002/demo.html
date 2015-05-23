@@ -1,0 +1,27 @@
+<div ng-app="myApp" ng-controller="myCtrl" id="rhizome" align="center">
+    <div ng-bind="questionnaire.name.text" class="label"></div>
+    <svg version="1.1" id="rhizSvg" rhiz-svg-panel="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="250" height="250" viewBox="0 0 100 100" ></svg>
+    <div id="quiz">
+        <ol id="questions" class="buttonlist">
+            <li ng-repeat="question in group.question">
+                <div class="question" ng-bind="question.text"></div>
+                <ol id="options" class="buttonlist">
+                    <li ng-repeat="option in getOptions(question.options.reference)">
+                        <button class="buttonface" ng-click="loadGroup(question, option.code, option.system)" ng-bind="option.display"></button>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <button class="buttonhalf" ng-click="initQuestionnaire()">Restart Q4C</button>
+        <button class="buttonhalf" ng-click="test()">Show FHIR</button>
+    </div>
+</div>
+<div id="theory">
+    <p>Resource-based Health Information Zone for the Mobile Enterprise</p>
+    <p>Rhizome is a set of directives and servicesI am building using AngularJS and other JavaScript libraries. The idea is to create a set of client-side components that will support standards-based mobile and social application development for the Healthcare industry.</p>
+    <p>Rhizome: Questions4Care, shown here, demonstrates how a Questionnaire application can use both machine-readable elements (codes and code systems) and human-readable elements, like PDF and Scalable Vector Graphics (SVG).</p>
+    <p>Rhizome makes ample use of an emerging Health Information standard called HL7 Fast Healthcare Information Resources (FHIR), which support interoperability through a resource-based approach to JSON- and XML-messaging. FHIR is quite a recent standard, but it is gaining traction as a way to work with Resource-based Health Information.</p>
+    <p>Interoperability often relies on a combined notion of human- and machine-readable content. HL7 FHIR resources usually use HTML5 for the human-readable portion, but you could also use an image like a JPEG or PNG, and in this case, I have used SVG, which allows me to use a JavaScript library called SnapSVG to animate the questionnaire whenever coded answers are selected, using a "frame-and-easing" algorithm.</p>
+</div>
+<!-- this is necessary because github cannot provide External Resources -->
+<script src="//cdn.jsdelivr.net/snap.svg/0.3.0/snap.svg-min.js"></script>

@@ -1,33 +1,93 @@
+//BootStrap
 var app = angular.module('myApp', ['rhizome']);
-    
-app.controller('myCtrl', function ($scope, codeService) {
-    var resource = res;
-    
-    // Small timing hack once the resource is loaded
-    $scope.q4c = resource.content;
-    codeService.loadCodedConcepts(resource.content)
-    $scope.groupHeader = resource.content.group.header;
-    $scope.group = resource.content.group;
-    setTimeout(function() { 
-        $scope.$broadcast('RhzFocusSvg', {
-            svg: resource.content.text.div,
-            frame: codeService.getInitialFrame()
-        }) 
-    }, 0);
-    
-    $scope.restartQuestionnaire = function () {
-        $scope.group = resource.content.group;
-        $scope.$broadcast('RhzFocusSvg', { 
-            frame: codeService.getInitialFrame() });
+var rhizome = angular.module('rhizome', []);
+
+rhizome.directive('rhizSvgPanel', function () {
+    return function ($scope, $element, $attr) {
+        var svg, svgRoot = Snap($element[0])
+        
+        $scope.$on('FocusFrame', function (evt, frId) {
+            focusFrame(frId, 2000)
+        });
+     
+        loadSvg = function(text) {
+            var svgFrag = Snap.parse(text)
+            svgRoot.append(svgFrag)
+            svg = svgRoot.select("#svg")
+        }
+
+        focusFrame = function(frId, dur) {
+            var fr = svg.select(frId)
+            svg.animate({
+                x: 0-fr.attr('x'),
+                y: 0-fr.attr('y')
+            }, dur)
+        }
+
+        loadSvg(res.content.text.div)
+        focusFrame('#question1', 0)
     }
-    
-    $scope.showPayload = function() {
-        alert(JSON.stringify(resource))
+});
+
+rhizome.controller('myCtrl', function ($scope, codeService) {
+    $scope.test = function() {
+        alert(JSON.stringify(res))
     }
+    $scope.getOptions = function (optRef) {
+        return codeService.getCodedConcept(optRef, true);
+    };
+    $scope.loadGroup = function (question, optCode, optCodeSys) {
+        var group = question.group;
+        for (g in group) {
+            var coding = group[g].name.coding;
+            for (c in coding) {
+                if ((coding[c].code === optCode) && (coding[c].system === optCodeSys)) {
+                    var opt = group[g].question[0].options.reference
+                    $scope.$broadcast('FocusFrame', opt);
+                    $scope.group = group[g];
+                    break;
+                }
+            }
+        }
+        return;
+    };
+    
+    //Initialize the Controller
+    $scope.initQuestionnaire = function() {
+        codeService.loadCodedConcepts(res.content.contained)
+        $scope.questionnaire = res.content;
+        $scope.groupHeader = res.content.group.header;
+        $scope.group = res.content.group;
+        $scope.$broadcast('FocusFrame', '#question1')
+    }
+    $scope.initQuestionnaire()
 
 });
-                    
-// HL7 FHIR JSON Document
+
+rhizome.factory('codeService', function () {
+    var svc = {}
+
+    svc.codedConcept = Object;
+
+    svc.loadCodedConcepts = function (contained) {
+        for (co in contained) {
+            var definedConcept = contained[co].define.concept;
+            for (cd in definedConcept) {
+                definedConcept[cd].system = contained[co].define.system;
+            }
+            svc.codedConcept[contained[co].id] = definedConcept;
+        }
+    };
+
+    svc.getCodedConcept = function (optionReference, removeHash) {
+        if (removeHash) {
+            optionReference = optionReference.substr(1);
+        }
+        return (svc.codedConcept[optionReference]);
+    };
+
+    return svc
+});
 
 var res = {
     "title": "Questionnaire \"3142\" Version \"1\"",

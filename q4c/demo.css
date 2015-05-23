@@ -1,3 +1,29 @@
+#demonstrator {
+    width: 305px;
+    height: 520px;
+    -moz-border-radius: 15px;
+    border-radius: 20px;
+    background-color: coral;
+}
+#inside {
+    position: absolute;
+    width: 280px;
+    height: 410px;
+    top: 50px;
+    left: 20px;
+    background-color: darkgray
+}
+#rhizSvg {
+    background-color: white
+}
+#quiz {
+    width:252px;
+    height:200px;
+    padding: 0px;
+    margin: 0px;
+    font-family: Helvetica, sans-serif;
+    font-size: 10pt
+}
 .frame {
     opacity: 0
 }
@@ -8,6 +34,7 @@
 .buttonhalf {
     width: 123px;
     height: 25px;
+    font-size: 8pt
 }
 ol.buttonlist {
     list-style: none;
@@ -19,29 +46,14 @@ ol.buttonlist {
     max-width: 250px;
 }
 .label {
-    font-weight: bold;
- /*   color: #b8d3da */
+    font-family: Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: bold
 }
-#theory {
+#theory-details {
     position: absolute;
-    width: 600px;
-    height: 424px;
-    top: 0px;
-    left: 318px;
-    padding-left: 16px;
-    color: #312b02;
-    background-color: #adb39b
-}
-#quiz {
-    width:250px;
-    height:200px;
-}
-#rhizome {
-    width:290px;
-    height:410px;
-    border-style: ridge;
-    background-color: #CCCCCC
-}
-#rhizSvg {
-    background-color: white
+    top: 50px;
+    left: 350px;
+    width: 400px;
+    /*    background-color:gray */
 }
