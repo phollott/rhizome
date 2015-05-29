@@ -1,4 +1,4 @@
-{
+jsonp({
         "title": "Questionnaire \"3142\" Version \"1\"",
             "id": "https://fhir.healthintersections.com.au/open/Questionnaire/3142",
             "link": [{
@@ -127,4 +127,4 @@
             }
         },
             "summary": "<div xmlns=\"http://www.w3.org/1999/xhtml\">&#xA;\t\t\tNIHI FHIR showcase sample questionnaire&#xA;\t\t</div>"
-    }
+    })
