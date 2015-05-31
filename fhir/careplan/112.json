@@ -72,9 +72,6 @@ jsonp({
 					],
 					"category":"other",
 					"timingPeriod":{"start":"2012-09-10"},
-					"actionResulting": [
-						{ "reference": "Questionnaire/3142" }
-					],
 					"details":"Eve will ask her dad to asist her to put the head of her bed on blocks"
 				}
 			},{
