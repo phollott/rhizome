@@ -159,6 +159,9 @@ jsonp({
 					],
 					"category":"other",
 					"timingPeriod":{"start":"2012-07-10"},
+					"actionResulting": [
+						{ "reference": "http://phollott.github.io/rhizome/fhir/questionnaire/3142.json" }
+					],
 					"details":"Eve will match a printed medication worksheet with the medication bottles at home"
 				}
 			},{
