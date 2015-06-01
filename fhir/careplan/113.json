@@ -1,0 +1,81 @@
+jsonp({
+		"title":"CarePlan with id integrate",
+		"id":"http://spark.furore.com/fhir/CarePlan/integrate",
+		"updated":"2015-04-03T13:22:53.318+00:00",
+		"published":"1601-01-01T00:00:00+00:00",
+		"author":[{"name":"(imported from file)"}],
+		"link":[
+			{"rel":"alternate","href":"http://hl7.org/fhir/CarePlan/integrate"},
+			{"rel":"self","href":"http://spark.furore.com/fhir/CarePlan/integrate/_history/spark9"}
+		],
+		"content":{
+			"resourceType":"CarePlan",
+			"text":{
+				"status":"generated",
+				"div":"<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient family is not ready to commit to goal setting at this time.  Goal setting will be addressed in the future</p>\r\n  <table>\r\n    <thead>\r\n      <tr>\r\n        <th>Start Date</th>\r\n        <th>Goal</th>\r\n        <th>Action Steps</th>\r\n        <th>Status</th>\r\n        <th>Date Last Updated</th>\r\n        <th>Comments</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <tr>\r\n        <td>10 Sep 2012</td>\r\n        <td>Eve will lose weight and reduce her GERDS symptoms by improving her diet</td>\r\n        <td>Eve will review photos of high and low density foods and share with her parents</td>\r\n        <td>New Goal</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>9/10/12 Eve eats one meal a day with her parents</td>\r\n      </tr>\r\n      <tr>\r\n        <td>10 Sep 2012</td>\r\n        <td>Eve will lose weight and reduce her GERDS symptoms by improving her diet</td>\r\n        <td>Eve will ask her dad to asist her to put the head of her bed on blocks</td>\r\n        <td>New Goal</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>9/10/12 Eve will sleep in her bed more often than the couch</td>\r\n      </tr>\r\n      <tr>\r\n        <td>10 Sep 2012</td>\r\n        <td>Eve will improve her GERDS symptoms</td>\r\n        <td>Eve will reduce her intake of coffee and chocolate</td>\r\n        <td>In Process</td>\r\n        <td>10 Sep 2012</td>\r\n        <td />\r\n      </tr>\r\n      <tr>\r\n        <td>27 Aug 2012</td>\r\n        <td>Eve will increase her energy by being more active</td>\r\n        <td>Eve will walk her friend's dog up and down a big hill 15-30 minutes 3 days a week</td>\r\n        <td>In Process</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>8/27/12 Eve would like to try for 5 days a week.  9/10/12 Eve is still walking the dogs.</td>\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will increase her energy by being more active</td>\r\n        <td>Eve will walk 3 blocks to her parents house twice a week</td>\r\n        <td>In Process</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>8/13/12 Eve walked 4 times the last week.  9/10/12 Eve did not walk to her parents the last week, but has plans to start again</td>\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will set up her medications and take as prescribed</td>\r\n        <td>Eve will us a calendar to check off after medications are taken</td>\r\n        <td>In Process</td>\r\n        <td>13 Aug 2012</td>\r\n        <td />\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will restart her light treatments</td>\r\n        <td>Eve will use her lights MWF after her shower for 3 minutes</td>\r\n        <td>In Process</td>\r\n        <td>27 Aug 2012</td>\r\n        <td>8/13/12 After restarting the vinegar soaks the psoriasis is improved and Eve plans to treat the remainder with light treatments.  She plans to start this week.  8/27/12 Since her skin is improved Eve has not been using the light treatment as often, maybe once a week.  She would like to increase to 3 times a week again</td>\r\n      </tr>\r\n      <tr>\r\n        <td>10 Jul 2012</td>\r\n        <td>Eve will set up her medications and take as prescribed</td>\r\n        <td>Eve will use a calendar of a chart to help her remember when to take her medications</td>\r\n        <td>In Process</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>7/23/12 Eve created a chart as a reminer to take the medications that do not fit in her pill box</td>\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will increase her energy by being more active</td>\r\n        <td>Eve will start using stretch bands and one step 2 days a week Mon/Wed 6-7am and maybe Friday afternoon</td>\r\n        <td>On-Hold</td>\r\n        <td>23 Aug 2012</td>\r\n        <td>7/30/12 will be able to esume exercise.  8/13/12 Eve prefers to focus on walking at this time</td>\r\n      </tr>\r\n      <tr>\r\n        <td>10 Jul 2012</td>\r\n        <td>Eve will set up her medications and take as prescribed</td>\r\n        <td>Eve will match a printed medication worksheet with the medication bottles at home</td>\r\n        <td>Completed</td>\r\n        <td>23 Jul 2012</td>\r\n        <td />\r\n      </tr>\r\n      <tr>\r\n        <td>10 Jul 2012</td>\r\n        <td>Eve will set up her medications and take as prescribed</td>\r\n        <td>Eve will get a medication box to sort her pills.  She will have one for scheduled medications and one for as needed</td>\r\n        <td>Completed</td>\r\n        <td>16 Jul 2012</td>\r\n        <td>7/16/12 Eve now has some of her medications set up in pill packs by her pharmacist</td>\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will increase her energy by being more active</td>\r\n        <td>Eve will open \"The Firm\" DVD workout package and listen to it</td>\r\n        <td>Discontinued</td>\r\n        <td>13 Aug 2012</td>\r\n        <td>7/30/12 Eve will be able to resume exercise on 7/30/12.  8/13/12 -hold until \"less busy\"</td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n</div>"
+			},
+			"contained":[{
+				"resourceType":"Condition",
+				"id":"p1",
+				"subject":{	"reference":"Patient/1", "display":"Eve Everywoman" },
+				"code":{"text":"GERDS"},
+				"status":"confirmed"
+			}, {
+				"resourceType":"Condition",
+				"id":"p2",
+				"subject":{ "reference":"Patient/1", "display":"Eve Everywoman" },
+				"code":{"text":"Obesity"},
+				"status":"confirmed"
+			}, {
+				"resourceType":"Condition",
+				"id":"p3",
+				"subject":{ "reference":"Patient/1", "display":"Eve Everywoman" },
+				"code":{"text":"Psoriasis"},
+				"status":"confirmed"
+			}],
+			"patient":{	"reference":"Patient/1", "display":"Eve Everywoman"},
+			"status":"active",
+			"modified":"2012-09-10",
+			"concern":[
+				{"reference":"/","display":"GERDS"},
+				{"reference":"/","display":"Obesity"},
+				{"reference":"/","display":"Psoriasis"}
+			],
+			"goal":[
+				{"id":"g1","description":"Eve will lose weight and reduce her GERDS symptoms by improving her diet","status":"in progress"},
+				{"id":"g2","description":"Eve will improve her GERDS symptoms","status":"in progress"},
+				{"id":"g3","description":"Eve will increase her energy by being more active","status":"in progress"},
+				{"id":"g4","description":"Eve will set up her medications and take as prescribed","status":"in progress"},
+				{"id":"g5","description":"Eve will restart her light treatments","status":"in progress"}
+			],
+			"activity":[{
+				"status":"not started",
+				"prohibited":false,
+				"notes":"9/10/12 Family members provide support",
+				"simple":{
+					"extension":[
+						{"url":"http://example.org/DoNotUse/EnhancedCarePlan/ActivityGoalLink","valueUri":"/"},
+						{"url":"http://example.org/DoNotUse/General/RevisionDate","valueDate":"2012-09-10"}
+					],
+					"category":"other",
+					"timingPeriod":{"start":"2012-09-10"},
+					"details":"Patient Family Members instructions"
+				}
+			},{
+				"status":"not started",
+				"prohibited":false,
+				"notes":"9/10/12 Family members provide chocolate",
+				"simple":{
+					"extension":[
+						{"url":"http://example.org/DoNotUse/EnhancedCarePlan/ActivityGoalLink","valueUri":"/"},
+						{"url":"http://example.org/DoNotUse/General/RevisionDate","valueDate":"2012-09-10"}
+					],
+					"category":"other",
+					"timingPeriod":{"start":"2012-09-10"},
+					"details":"PAtient Family members instructions"
+				}
+			}],
+			"notes":"Patient family is not ready to commit to goal setting at this time.  Goal setting will be addressed in the future"
+		},
+		"summary":"<div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient family is not ready to commit to goal setting at this time.  Goal setting will be addressed in the future</p>\r\n  <table>\r\n    <thead>\r\n      <tr>\r\n        <th>Start Date</th>\r\n        <th>Goal</th>\r\n        <th>Action Steps</th>\r\n        <th>Status</th>\r\n        <th>Date Last Updated</th>\r\n        <th>Comments</th>\r\n      </tr>\r\n    </thead>\r\n    <tbody>\r\n      <tr>\r\n        <td>10 Sep 2012</td>\r\n        <td>Eve will lose weight and reduce her GERDS symptoms by improving her diet</td>\r\n        <td>Eve will review photos of high and low density foods and share with her parents</td>\r\n        <td>New Goal</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>9/10/12 Eve eats one meal a day with her parents</td>\r\n      </tr>\r\n      <tr>\r\n        <td>10 Sep 2012</td>\r\n        <td>Eve will lose weight and reduce her GERDS symptoms by improving her diet</td>\r\n        <td>Eve will ask her dad to asist her to put the head of her bed on blocks</td>\r\n        <td>New Goal</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>9/10/12 Eve will sleep in her bed more often than the couch</td>\r\n      </tr>\r\n      <tr>\r\n        <td>10 Sep 2012</td>\r\n        <td>Eve will improve her GERDS symptoms</td>\r\n        <td>Eve will reduce her intake of coffee and chocolate</td>\r\n        <td>In Process</td>\r\n        <td>10 Sep 2012</td>\r\n        <td />\r\n      </tr>\r\n      <tr>\r\n        <td>27 Aug 2012</td>\r\n        <td>Eve will increase her energy by being more active</td>\r\n        <td>Eve will walk her friend's dog up and down a big hill 15-30 minutes 3 days a week</td>\r\n        <td>In Process</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>8/27/12 Eve would like to try for 5 days a week.  9/10/12 Eve is still walking the dogs.</td>\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will increase her energy by being more active</td>\r\n        <td>Eve will walk 3 blocks to her parents house twice a week</td>\r\n        <td>In Process</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>8/13/12 Eve walked 4 times the last week.  9/10/12 Eve did not walk to her parents the last week, but has plans to start again</td>\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will set up her medications and take as prescribed</td>\r\n        <td>Eve will us a calendar to check off after medications are taken</td>\r\n        <td>In Process</td>\r\n        <td>13 Aug 2012</td>\r\n        <td />\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will restart her light treatments</td>\r\n        <td>Eve will use her lights MWF after her shower for 3 minutes</td>\r\n        <td>In Process</td>\r\n        <td>27 Aug 2012</td>\r\n        <td>8/13/12 After restarting the vinegar soaks the psoriasis is improved and Eve plans to treat the remainder with light treatments.  She plans to start this week.  8/27/12 Since her skin is improved Eve has not been using the light treatment as often, maybe once a week.  She would like to increase to 3 times a week again</td>\r\n      </tr>\r\n      <tr>\r\n        <td>10 Jul 2012</td>\r\n        <td>Eve will set up her medications and take as prescribed</td>\r\n        <td>Eve will use a calendar of a chart to help her remember when to take her medications</td>\r\n        <td>In Process</td>\r\n        <td>10 Sep 2012</td>\r\n        <td>7/23/12 Eve created a chart as a reminer to take the medications that do not fit in her pill box</td>\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will increase her energy by being more active</td>\r\n        <td>Eve will start using stretch bands and one step 2 days a week Mon/Wed 6-7am and maybe Friday afternoon</td>\r\n        <td>On-Hold</td>\r\n        <td>23 Aug 2012</td>\r\n        <td>7/30/12 will be able to esume exercise.  8/13/12 Eve prefers to focus on walking at this time</td>\r\n      </tr>\r\n      <tr>\r\n        <td>10 Jul 2012</td>\r\n        <td>Eve will set up her medications and take as prescribed</td>\r\n        <td>Eve will match a printed medication worksheet with the medication bottles at home</td>\r\n        <td>Completed</td>\r\n        <td>23 Jul 2012</td>\r\n        <td />\r\n      </tr>\r\n      <tr>\r\n        <td>10 Jul 2012</td>\r\n        <td>Eve will set up her medications and take as prescribed</td>\r\n        <td>Eve will get a medication box to sort her pills.  She will have one for scheduled medications and one for as needed</td>\r\n        <td>Completed</td>\r\n        <td>16 Jul 2012</td>\r\n        <td>7/16/12 Eve now has some of her medications set up in pill packs by her pharmacist</td>\r\n      </tr>\r\n      <tr>\r\n        <td>23 Jul 2012</td>\r\n        <td>Eve will increase her energy by being more active</td>\r\n        <td>Eve will open \"The Firm\" DVD workout package and listen to it</td>\r\n        <td>Discontinued</td>\r\n        <td>13 Aug 2012</td>\r\n        <td>7/30/12 Eve will be able to resume exercise on 7/30/12.  8/13/12 -hold until \"less busy\"</td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n</div>"
+	})
