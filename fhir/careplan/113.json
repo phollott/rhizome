@@ -1,5 +1,5 @@
 jsonp({
-		"title":"CarePlan with id integrate",
+		"title":"CarePlan for Family Members",
 		"id":"http://spark.furore.com/fhir/CarePlan/integrate",
 		"updated":"2015-04-03T13:22:53.318+00:00",
 		"published":"1601-01-01T00:00:00+00:00",
