@@ -98,7 +98,9 @@ jsonp({
                                             "code": "F"
                                     }]
                                 },
-
+                                "subject": {
+                                    "reference": "http://phollott.github.io/rhizome/fhir/careplan/114"
+                                },
                                     "question": [{
                                     "text": "Female patient. Continue with questions about risk.",
                                         "options": {
@@ -114,7 +116,9 @@ jsonp({
                                             "code": "M"
                                     }]
                                 },
-
+                                "subject": {
+                                    "reference": "http://phollott.github.io/rhizome/fhir/careplan/115"
+                                },
                                     "question": [{
                                     "text": "Male patient. Continue with questions about age.",
                                         "options": {
